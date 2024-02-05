@@ -1,0 +1,47 @@
+/* CSS for Prompt1Page */
+ 
+/* body {
+    overflow: hidden;
+  }
+   */
+
+   .p-all {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('https://wallpapers.com/images/hd/wallpaper-valentines-day-hearts-lots-fly-love-m7tt0svylhvxbrvn.webp'); /* Replace with the path to your image */
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+  
+
+  .prompt1-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(252, 1, 185);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+
+  h2{
+    display: flex;
+    justify-content: center;
+  }
+ 
+  
+  /* Hide the navbar and footer
+  .navbar-container, .sidebar-container {
+    display: none;
+  }
+   */
