@@ -1,47 +1,85 @@
-/* CSS for Prompt1Page */
- 
-/* body {
-    overflow: hidden;
-  }
-   */
+/* Base styles for HTML and body to prevent default margins and ensure full viewport coverage */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* Add a universal font for consistency */
+}
 
-   .p-all {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url('https://wallpapers.com/images/hd/wallpaper-valentines-day-hearts-lots-fly-love-m7tt0svylhvxbrvn.webp'); /* Replace with the path to your image */
-    /* background-size: cover; */
-    background-position: center;
-    background-repeat: no-repeat;
+/* Style for the entire page background */
+.p-all {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://wallpapers.com/images/hd/wallpaper-valentines-day-hearts-lots-fly-love-m7tt0svylhvxbrvn.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the .prompt1-container vertically and horizontally */
+  z-index: 1; /* Lower z-index to ensure modal-like appearance */
+}
 
-    padding: 100%;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-  }
-  
+/* Central container for content */
+.prompt1-container {
+  width: auto;
+  max-width: 80%; /* Limit the max width for better spacing on larger screens */
+  background-color: rgba(252, 1, 185, 0.95); /* Slightly transparent for a softer look */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center all text for consistency */
+  z-index: 2; /* Ensure it stays above the background */
+}
 
+/* Style adjustments for headings, paragraphs, and images */
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+p {
+  color: #ffffff;
+  margin: 10px 0; /* Add vertical space around paragraphs */
+}
+
+.prompt1-container img {
+  width: 100%; /* Make images responsive */
+  max-width: 200px; /* Limit image size */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center images */
+}
+
+/* Button styles for better appearance and interaction */
+button {
+  background-color: #c192b1; /* A matching but distinct button color */
+  color: #0f0202;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer; /* Change cursor to indicate clickable */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #cc0088; /* Darken button on hover for feedback */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
   .prompt1-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(252, 1, 185);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
+    padding: 20px; /* Reduce padding on smaller screens */
   }
 
-  h2{
-    display: flex;
-    justify-content: center;
+  h2, p {
+    font-size: 1.2rem; /* Adjust text size for smaller screens */
   }
- 
-  
-  /* Hide the navbar and footer
-  .navbar-container, .sidebar-container {
-    display: none;
+
+  button {
+    font-size: 0.9rem; /* Scale down button text size */
   }
-   */
+}

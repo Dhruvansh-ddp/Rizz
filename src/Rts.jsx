@@ -1,7 +1,7 @@
 // import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 // import Sidebar from "./Sidebar";
 // // import Home from "./Home";
 // import About from "./About";
@@ -17,7 +17,7 @@ const Rts = () => {
       {/* <Sidebar className="sidebar" /> */}
 
       <div className="sub-container">
-        <Navbar className="navbar" />
+        {/* <Navbar className="navbar" /> */}
 
         <Routes className="routes">
           {/* <Route exact path="/" element={<Home />} /> */}

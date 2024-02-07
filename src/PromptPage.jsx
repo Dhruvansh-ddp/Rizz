@@ -1,5 +1,6 @@
 // import React from 'react';
 import { useParams } from "react-router-dom";
+// import "./assets/Prompt1Page.css";
 import Prompt1Page from "./assets/Prompt1Page.jsx";
 import Prompt2Page from "./assets/Prompt2Page.jsx";
 import Prompt3Page from "./assets/Prompt3Page.jsx";
@@ -65,8 +66,9 @@ const PromptPage = () => {
   };
 
   return (
+    // <div className="promtpages">
     <div>
-      <h2>Prompt {promptId}</h2>
+      {/* <h2>Prompt {promptId}</h2> */}
       {renderPromptPage(promptId)}
     </div>
   );
