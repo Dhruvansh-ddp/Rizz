@@ -45,7 +45,7 @@ const Prompt8Page = () => {
           <>
             {showQuestion && (
               <div>
-                <h2>Truth or Dare</h2>
+                <h2>Tell me one thing 😡 </h2>
                 <img
                   className="h-[200px]"
                   src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXRycXVyZ3BvejdnbHJoeXdpbHQzNXVoM3czY2c4aWR5MGVmeHRneiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m0MfjLtKOgTPG/giphy-downsized-large.gif"
