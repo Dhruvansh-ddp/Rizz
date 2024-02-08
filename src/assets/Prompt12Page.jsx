@@ -45,7 +45,7 @@ const Prompt12Page = () => {
           <>
             {showQuestion && (
               <div>
-                <h2>Truth or Dare</h2>
+                <h2>Question of the Day</h2>
                 <p>Do you have todays movie tickets?</p>
                 <button onClick={handleYesClick}>Yes</button>
                 <button onClick={handleNoClick}>No</button>
