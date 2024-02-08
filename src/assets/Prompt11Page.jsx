@@ -45,7 +45,7 @@ const Prompt11Page = () => {
           <>
             {showQuestion && (
               <div>
-                <h2>Litlle bit Curious </h2>
+                <h2>Little bit Curious </h2>
                 <p>Do you believe in love at first sight?</p>
                 <button onClick={handleYesClick}>Yes</button>
                 <button onClick={handleNoClick}>No</button>
