@@ -45,7 +45,7 @@ const Prompt9Page = () => {
           <>
             {showQuestion && (
               <div>
-                <h2>Truth or Dare</h2>
+                <h2>Time of Truth</h2>
                 <p>Are you a magician?</p>
                 <button onClick={handleYesClick}>Yes, why?</button>
                 <button onClick={handleNoClick}>No, why?</button>
