@@ -7,7 +7,7 @@ const PromptsPage = () => {
 
   return (
     <div>
-      <h2>Pickup Line Prompts</h2>
+      <h2> Rizz Lines </h2>
       <ul>
         {prompts.map((prompt) => (
           <li key={prompt}>
