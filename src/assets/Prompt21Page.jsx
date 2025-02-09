@@ -44,7 +44,7 @@ const Prompt21Page = () => {
               <div>
                 <img
                   className="h-[200px]"
-                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd294eHZqaG1vdWRiZmV1Mm5zMmF0ZXVwbzhyYmV4Zm80OTlyYm1nYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jJm03i3eU7U0n0Y98k/giphy.gif"
+                  src="https://media1.tenor.com/m/xPprxSKuEcMAAAAd/hanamaruobake-hanamaru.gif"
                   alt="Writing"
                 />
                 <p>
@@ -69,11 +69,11 @@ const Prompt21Page = () => {
           </>
         ) : (
           <div>
-            <img
+            {/* <img
               className="h-[200px]"
               src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHF4NzF3eXpmemN3emlhd3l5NG11bjRzZTNlMjRtbW1xOGJqaGM4YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6c0v0v0S1W100/giphy.gif"
               alt="Writing Heart"
-            />
+            /> */}
             <p>You are the poem I never knew I wanted to write.</p>
           </div>
         )}

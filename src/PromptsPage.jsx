@@ -33,7 +33,7 @@ const PromptsPage = () => {
     <div className="prompts-container">
       <h2 className="prompts-title">Pickup Line Prompts</h2>
       <div className="prompts-grid">
-        {Array.from(Array(22), (_, index) => index + 1).map((prompt) => (
+        {Array.from(Array(21), (_, index) => index + 1).map((prompt) => (
           <div key={prompt} className="prompt-card">
             <Link to={`/${prompt}`} className="prompt-link">
               <span>Prompt {prompt}</span>

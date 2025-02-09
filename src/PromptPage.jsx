@@ -72,8 +72,8 @@ const PromptPage = () => {
         return <Prompt20Page />;
       case "21":
         return <Prompt21Page />;
-      case "22":
-        return <Prompt22Page />;
+      // case "22":
+      //   return <Prompt22Page />;
 
       default:
         return null;

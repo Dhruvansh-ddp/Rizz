@@ -44,12 +44,12 @@ const Prompt17Page = () => {
               <div>
                 <img
                   className="h-[200px]"
-                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3E2a2QwbzVtcm4xYXBjY2ZmcGg5NzNxdXo3OXRhNmYxem44MmJwcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4Lhzz6jwVKPMU6I87/giphy.gif"
+                  src="https://media.tenor.com/6MnOJTBoeeEAAAAM/tom-and-jerry-cat.gif"
                   alt="Chocolate"
                 />
                 <p>
-                  They say chocolate is the way to someone's heart. Would you
-                  like to be my sweet?
+                  They say sweet is the way to someone's heart. Would you like
+                  to be my sweet?
                 </p>
                 <button onClick={handleYesClick}>Yes</button>
                 <button onClick={handleNoClick}>No</button>
@@ -57,8 +57,12 @@ const Prompt17Page = () => {
             )}
             {showOptions && (
               <div>
-                <p>Sorry, I don't want to be a diabetic</p>
-                <button onClick={handleRetryClick}>Hmm...</button>
+                <img
+                  className="h-[200px]"
+                  src="https://media.tenor.com/8wxUQVqU9J0AAAAM/cutecat-cute.gif"
+                  alt="Chocolate"
+                />
+                <p>Okay then I'll save you for Dessert</p>
               </div>
             )}
             {showDareButton && (
@@ -71,9 +75,10 @@ const Prompt17Page = () => {
           <div>
             <img
               className="h-[200px]"
-              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm9yYXhrYWx0cG96NmJyc3RucXNxazB5M3NjdWk4NGRtb2ZicGZqMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YxT0v7lW71zQjQkE4N/giphy.gif"
-              alt="Chocolate hearts"
+              src="https://media1.tenor.com/m/9DUuq3luvkgAAAAC/love-quotes.gif"
+              alt="Chocolate"
             />
+
             <p>You are the sweetest thing I know.</p>
           </div>
         )}

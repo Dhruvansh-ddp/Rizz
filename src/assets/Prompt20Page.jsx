@@ -44,7 +44,7 @@ const Prompt20Page = () => {
               <div>
                 <img
                   className="h-[200px]"
-                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmU0b3FtdGN3bTVoNm1wZWJ2b3A3eGV3cWJ5MjFhM2luejVvd2d1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g0KssQYVlcU1W/giphy.gif"
+                  src="https://media.tenor.com/woeasjYR7JMAAAAi/bubu-bubbu.gif"
                   alt="Coffee"
                 />
                 <p>
@@ -71,7 +71,7 @@ const Prompt20Page = () => {
           <div>
             <img
               className="h-[200px]"
-              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExazlzMXlxbG80aWJndzFoYXZycGI5dTVpNmN5M242NnV2anV0cmljayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYu0u2OO94mH29W/giphy.gif"
+              src="https://media.tenor.com/16JLRwPfDfAAAAAj/dudu-bubu-dancing-so-cute.gif"
               alt="Coffee Love"
             />
             <p>I'd love to brew up a sweet romance with you.</p>

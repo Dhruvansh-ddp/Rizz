@@ -44,7 +44,7 @@ const Prompt19Page = () => {
               <div>
                 <img
                   className="h-[200px]"
-                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjlyZHN1a2xiZGYwZWJ5cXZ4bmJucmNlbXNtb3drcjV4NXpnb3JjbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1Lc7zGzd6X8sxe4g/giphy.gif"
+                  src="https://media.tenor.com/KpMja4OXFTUAAAAM/dancing-cat-dance.gif"
                   alt="Dancing"
                 />
                 <p>If love was a dance, would you be my partner?</p>
@@ -68,7 +68,7 @@ const Prompt19Page = () => {
           <div>
             <img
               className="h-[200px]"
-              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWNjdDk2NHJjcnR3cm1tbHBtcnF1Mm9oODg4bDN6NHNuaXZ1dW8wNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UqVGVx0rP81eE/giphy.gif"
+              src="https://media.tenor.com/16JLRwPfDfAAAAAi/dudu-bubu-dancing-so-cute.gif"
               alt="Dancing "
             />
             <p>Let's waltz into each other's hearts.</p>

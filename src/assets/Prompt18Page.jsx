@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Prompt1Page.css";
 
 const Prompt18Page = () => {
@@ -44,12 +44,13 @@ const Prompt18Page = () => {
               <div>
                 <img
                   className="h-[200px]"
-                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzI4d200c2E2Mm5ld2M5d3B3dG55bXNlc200cXN0aGFyZHR4dmJtMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W4Qt24539k3W35lM6x/giphy.gif"
+                  src="https://media1.tenor.com/m/eSK4SyEXPr4AAAAC/anime-himmel.gif"
                   alt="Stars Align"
                 />
                 <p>
-                  Did you know stars align every thousand years? Just like how
-                  we aligned today...
+                  Did you know stars align every thousand years?
+                  <br />
+                  Just like how we aligned today...
                 </p>
                 <button onClick={handleYesClick}>Yes</button>
                 <button onClick={handleNoClick}>No</button>
@@ -58,7 +59,7 @@ const Prompt18Page = () => {
             {showOptions && (
               <div>
                 <p>The stars should align back again for the world's sake.</p>
-                <button onClick={handleRetryClick}>Hmm...</button>
+                {/* <button onClick={handleRetryClick}>Hmm...</button> */}
               </div>
             )}
             {showDareButton && (
@@ -71,13 +72,14 @@ const Prompt18Page = () => {
           <div>
             <img
               className="h-[200px]"
-              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTRpM3F1ZjZ3ZGY4dmJpajZxd2N4bWFydWJpYXo3cThsY2g5ajgydSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRwWz0HCEzN1xUY/giphy.gif"
+              src="https://media.tenor.com/hokZOkasF8wAAAAi/%3C3-star.gif"
               alt="Heart Moon"
             />
             <p>
               Let's shoot for the stars and see where our constellations lead
               us?
             </p>
+            <button onClick={handleRetryClick}>Umm Interesting</button>
           </div>
         )}
       </div>

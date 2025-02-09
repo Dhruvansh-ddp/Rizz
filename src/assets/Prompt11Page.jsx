@@ -53,12 +53,22 @@ const Prompt11Page = () => {
             )}
             {showOptions && (
               <div>
+                <img
+                  className="h-[200px]"
+                  src="https://media.tenor.com/GqvruJlk4UMAAAAM/cute-baby-cat.gif"
+                  alt="Walking cat"
+                />
                 <p>Well, I am gonna break your belief </p>
                 {/* <button onClick={handleRetryClick}>Retry</button> */}
               </div>
             )}
             {showDareButton && (
               <div>
+                <img
+                  className="h-[200px]"
+                  src="https://gifdb.com/images/high/cute-cat-pirate-a9ztortf52y8urwo.webp"
+                  alt="Walking gojo"
+                />
                 <p>So should I walk by?</p>
                 {/* <button onClick={handleDareButtonClick}>Dare</button> */}
               </div>
