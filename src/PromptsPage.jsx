@@ -30,15 +30,6 @@ const PromptsPage = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div>
-      <h2> Rizz Lines </h2>
-      <ul>
-        {prompts.map((prompt) => (
-          <li key={prompt}>
-            <Link to={`/${prompt}`}>{prompt}</Link>
-          </li>
-=======
     <div className="prompts-container">
       <h2 className="prompts-title">Pickup Line Prompts</h2>
       <div className="prompts-grid">
@@ -62,7 +53,6 @@ const PromptsPage = () => {
               )}
             </button>
           </div>
->>>>>>> a1f30cf (new prop)
         ))}
       </div>
     </div>
