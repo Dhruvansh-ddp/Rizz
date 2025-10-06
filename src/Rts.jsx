@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Contact from "./Contact";
 import PromptsPage from "./PromptsPage";
 import PromptPage from "./PromptPage";
+import SpinTheWheel from "./SpinTheWheel";
 
 const Rts = () => {
   return (
@@ -27,6 +28,7 @@ const Rts = () => {
           <Route path="/contact" element={<Contact />} /> */}
           <Route path="/" element={<PromptsPage />} />
           <Route path="/:promptId" element={<PromptPage />} />
+          <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
         </Routes>
       </div>
     </Router>
