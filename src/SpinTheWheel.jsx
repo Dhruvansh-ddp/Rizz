@@ -13,7 +13,7 @@ const SpinTheWheel = () => {
     { text: "Better luck\nnext time", color: "#4BC0C0", weight: 0.3 },
     { text: "Sing Bhujiya", color: "#9966FF", weight: 1 },
     { text: "5₹ off", color: "#C9CBCF", weight: 1 },
-    { text: "Nachos", color: "#8AC34A", weight: 1.5 },
+    { text: "Nachos", color: "#8AC34A", weight: 1 },
   ]);
 
   // Calculate angles for sections
