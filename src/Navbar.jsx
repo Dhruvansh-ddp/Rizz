@@ -28,7 +28,7 @@ const Navbar = () => {
             </Link>
           </li> */}
           <li className="navbar-item">
-            <Link to="/prompts" className="navbar-link">
+            <Link to="/pick-up-lines" className="navbar-link">
               PROMPTS
             </Link>
           </li>

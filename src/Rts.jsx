@@ -11,6 +11,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PromptsPage from "./PromptsPage";
 import PromptPage from "./PromptPage";
 import SpinTheWheel from "./SpinTheWheel";
+import GameHot from "./games/GameHot";
+import Home from "./Home";
 
 const Rts = () => {
   return (
@@ -26,9 +28,11 @@ const Rts = () => {
           <Route path="/project" element={<Project />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} /> */}
-          <Route path="/" element={<PromptsPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/pick-up-lines" element={<PromptsPage />} />
           <Route path="/:promptId" element={<PromptPage />} />
           <Route path="/spin-the-wheel" element={<SpinTheWheel />} />
+          <Route path="/truth-or-dare" element={<GameHot />} />
         </Routes>
       </div>
     </Router>

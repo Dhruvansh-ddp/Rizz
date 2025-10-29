@@ -7,23 +7,24 @@ const SpinTheWheel = () => {
   const [result, setResult] = useState("");
   const [rotation, setRotation] = useState(0);
   const [sections, setSections] = useState([
-    { text: "Chips", color: "#FF6384", weight: 1 },
-    { text: "Ratlami Sev", color: "#36A2EB", weight: 1 },
-    { text: "10₹ off", color: "#FFCE56", weight: 0.5 },
-    { text: "Better luck\nnext time", color: "#4BC0C0", weight: 0.3 },
-    { text: "Sing Bhujiya", color: "#9966FF", weight: 1 },
-    { text: "5₹ off", color: "#C9CBCF", weight: 1 },
-    { text: "Nachos", color: "#8AC34A", weight: 0.8 },
+    { text: "Chips", color: "#FF6384" },
+    { text: "Ratlami Sev", color: "#36A2EB" },
+    { text: "10₹ off", color: "#FFCE56" },
+    { text: "Better luck\nnext time", color: "#4BC0C0" },
+    { text: "Sing Bhujiya", color: "#9966FF" },
+    { text: "5₹ off", color: "#C9CBCF" },
+    { text: "Nachos", color: "#8AC34A" },
   ]);
+  const [players, setPlayers] = useState(["Player 1", "Player 2"]);
 
-  // Calculate angles for sections
-  const totalWeight = sections.reduce((acc, s) => acc + s.weight, 0);
+  // Calculate equal angles for sections (equal chance distribution)
+  const segmentAngle = sections.length > 0 ? 360 / sections.length : 0;
   let currentAngle = 0;
   const sectionsWithAngles = sections.map((section) => {
-    const angle = (section.weight / totalWeight) * 360;
     const startAngle = currentAngle;
-    currentAngle += angle;
-    return { ...section, startAngle, endAngle: currentAngle, angle };
+    const endAngle = currentAngle + segmentAngle;
+    currentAngle = endAngle;
+    return { ...section, startAngle, endAngle, angle: segmentAngle };
   });
 
   const spinWheel = () => {
@@ -69,7 +70,6 @@ const SpinTheWheel = () => {
       {
         text: "New Section",
         color: "#" + Math.floor(Math.random() * 16777215).toString(16),
-        weight: 1,
       },
     ]);
   };
@@ -308,6 +308,47 @@ const SpinTheWheel = () => {
       {/* Customization */}
       <div className="customization-container">
         <h2 className="customization-title">⚙️ Customize Your Wheel</h2>
+        {/* Optional: Apply player names to wheel for personalization */}
+        <div className="sections-container" style={{ marginBottom: 20 }}>
+          <div className="section-item">
+            <div style={{ display: "flex", flexDirection: "column", gap: 8, width: "100%" }}>
+              <strong>Player Names</strong>
+              {players.map((p, i) => (
+                <input
+                  key={i}
+                  type="text"
+                  value={p}
+                  onChange={(e) =>
+                    setPlayers((prev) => prev.map((n, idx) => (idx === i ? e.target.value : n)))
+                  }
+                  placeholder={`Player ${i + 1}`}
+                  className="text-input"
+                />
+              ))}
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <button
+                  className="add-button"
+                  onClick={() => setPlayers((prev) => [...prev, `Player ${prev.length + 1}`])}
+                >
+                  ➕ Add Player
+                </button>
+                <button
+                  className="add-button"
+                  onClick={() =>
+                    setSections(
+                      players.map((name, i) => ({
+                        text: name,
+                        color: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF", "#C9CBCF", "#8AC34A"][i % 7],
+                      }))
+                    )
+                  }
+                >
+                  Apply Names to Wheel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <button onClick={addSection} className="add-button">
           ➕ Add Section
@@ -337,23 +378,7 @@ const SpinTheWheel = () => {
                 }
                 className="color-input"
               />
-              <input
-                type="number"
-                id={`weight-${index}`}
-                name={`weight-${index}`}
-                value={section.weight}
-                onChange={(e) =>
-                  handleSectionChange(
-                    index,
-                    "weight",
-                    parseFloat(e.target.value) || 1
-                  )
-                }
-                min="0.1"
-                step="0.1"
-                placeholder="Weight"
-                className="weight-input"
-              />
+              {/* Weight removed for equal-chance distribution */}
               <button
                 onClick={() => removeSection(index)}
                 className="remove-button"
