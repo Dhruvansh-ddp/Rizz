@@ -1,10 +1,11 @@
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState, useCallback } from "react";
 import "../styles/EqualWheel.css";
 
 /**
  * EqualWheel
  * - Renders an equal-probability spinning wheel with given segments
  * - Calls onWinner(segment, index) when spin completes
+ * - Mobile-optimized with touch events and performance improvements
  */
 const EqualWheel = ({ segments = [], onWinner }) => {
   const wheelRef = useRef(null);
@@ -23,8 +24,14 @@ const EqualWheel = ({ segments = [], onWinner }) => {
     });
   }, [segments, segmentAngle]);
 
-  const spinWheel = () => {
+  const spinWheel = useCallback(() => {
     if (spinning || segments.length === 0) return;
+    
+    // Prevent double-tap zoom on mobile
+    if (window.event) {
+      window.event.preventDefault();
+    }
+    
     setSpinning(true);
 
     const minSpins = 5;
@@ -44,7 +51,14 @@ const EqualWheel = ({ segments = [], onWinner }) => {
       setSpinning(false);
       if (onWinner) onWinner(segments[winnerIndex], winnerIndex);
     }, 5000);
-  };
+  }, [spinning, segments, rotation, sectionsWithAngles, onWinner]);
+
+  // Handle both click and touch events
+  const handleSpin = useCallback((e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    spinWheel();
+  }, [spinWheel]);
 
   return (
     <div className="equal-wheel-wrapper">
@@ -55,7 +69,10 @@ const EqualWheel = ({ segments = [], onWinner }) => {
           height="500"
           viewBox="0 0 500 500"
           className={`equal-wheel-svg ${spinning ? "spinning" : ""}`}
-          style={{ transform: `rotate(${rotation}deg)` }}
+          style={{ 
+            transform: `rotate(${rotation}deg)`,
+            willChange: spinning ? 'transform' : 'auto'
+          }}
         >
           <defs>
             <linearGradient id="eqRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -151,7 +168,13 @@ const EqualWheel = ({ segments = [], onWinner }) => {
         </div>
       </div>
 
-      <button onClick={spinWheel} disabled={spinning || segments.length === 0} className="equal-spin-button">
+      <button 
+        onClick={handleSpin}
+        onTouchStart={handleSpin}
+        disabled={spinning || segments.length === 0} 
+        className="equal-spin-button"
+        style={{ touchAction: 'manipulation' }}
+      >
         <span>{spinning ? "🎰 SPINNING..." : "🎯 SPIN"}</span>
       </button>
     </div>
